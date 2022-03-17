@@ -1,16 +1,30 @@
-public class Account {
-    private String accountUser;
 
-    public Account(String username){
-        this.accountUser = username;
-        System.out.println("Login criado");
-    }
+public class Account implements Comparable<Account> {
+	private String accountUser, senha;
 
-    public String getUsername(){
-        return accountUser;
-    }
+	public Account(String username, String senha) {
+		this.accountUser = username;
+		this.setSenha(senha);
+	}
 
-    public void login(){
-        System.out.println("Bem vindo ao Login");
-    }
+	public String getUsername() {
+		return accountUser;
+	}
+
+	public String setUsername(String username) {
+		return this.accountUser = username;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	@Override
+	public int compareTo(Account o) {
+		return this.accountUser.compareTo(o.accountUser);
+	}
 }
