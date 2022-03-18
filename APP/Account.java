@@ -1,26 +1,38 @@
 
 public class Account implements Comparable<Account> {
-	private String accountUser, senha;
+	private String accountUser;
+	private String pass;
+	private String name;
 
-	public Account(String username, String senha) {
+	public Account(String username, String pass, String name) {
 		this.accountUser = username;
-		this.setSenha(senha);
+		this.pass = pass;
+		this.name = name;
+
 	}
 
-	public String getUsername() {
+	public String getUserName() {
 		return accountUser;
 	}
 
-	public String setUsername(String username) {
+	public String setUserName(String username) {
 		return this.accountUser = username;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getPass() {
+		return pass;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override

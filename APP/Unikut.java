@@ -1,13 +1,14 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
+
 public class Unikut {
 
 	private LinkedList<Account> accounts = new LinkedList<Account>();
 
 	public boolean createAccount(Account c) {
 		for (Account accounts : accounts) {
-			if (c.getUsername().equals(accounts.getUsername())) {
+			if (c.getUserName().equals(accounts.getUserName())) {
 				return false;
 			}
 
@@ -18,8 +19,8 @@ public class Unikut {
 
 	public boolean login(String userName, String senha) {
 		for (Account accounts : accounts) {
-			if (accounts.getUsername().equals(userName)) {
-				if (accounts.getSenha().equals(senha)) {
+			if (accounts.getUserName().equals(userName)) {
+				if (accounts.getPass().equals(senha)) {
 					return true;
 				}
 			}
@@ -28,5 +29,7 @@ public class Unikut {
 		return false;
 
 	}
+	
+	
 
 }
